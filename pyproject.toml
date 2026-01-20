@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyautodiff"
+version = "0.1.0"
+description = "A lightweight automatic differentiation library in pure Python/NumPy"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "Atharva Patil"}
+]
+keywords = ["autodiff", "automatic-differentiation", "machine-learning", "deep-learning", "gradients"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.20.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "torch>=2.0",  # For verification against PyTorch
+]
+
+[project.urls]
+Homepage = "https://github.com/atharvapatil/pyautodiff"
+Repository = "https://github.com/atharvapatil/pyautodiff"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pyautodiff*"]
